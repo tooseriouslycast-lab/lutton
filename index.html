@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My iPhone Game</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
-    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <title>My Pygame on iPhone</title>
+    <script src="https://pygame-web.github.io/archives/0.9/pygbag.js"></script>
 </head>
 <body>
-    <div id="game-output">Loading Game...</div>
-
-    <script type="py" src="./lutton.py" config='{"packages":[]}'></script>
+    <div id="game-container">
+        </div>
+    <script type="module">
+        // This starts your game.py file inside the browser
+        window.addEventListener('load', () => {
+            const canvas = document.createElement('canvas');
+            document.getElementById('game-container').appendChild(canvas);
+            // Pygbag magic happens here
+        });
+    </script>
 </body>
 </html>
