@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>SwingBot: Claw to the Moon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
-        body { margin:0; background:#000; overflow:hidden; }
-        canvas { image-rendering: pixelated; width:100vw; height:100vh; display:block; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: #000; overflow: hidden; touch-action: none; }
+        canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            image-rendering: pixelated;
+        }
     </style>
 </head>
 <body>
+    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     <script src="https://pygame-web.github.io/pygbag/build/pygame.js"></script>
 </body>
 </html>
